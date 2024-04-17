@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+}
+
+ul,
+ol {
+  margin-bottom: 0;
+}
+
+:root {
+  --white-color: #f9f9f9;
+  --black-color: #1f211f;
+  --black-background-color: #1f211f;
+  --paragraph-white-color: #cccccc;
+  --paragraph-black-color: #5c5b5a;
+  --primary-color: #ff9e03;
+  --moon-color: linear-gradient(40deg, #8983f7, #a3dafb 70%);
+}
+
+.display-none {
+  display: none !important  ;
+}
+
+.black-color {
+  color: var(--black-color) !important;
+}
+
+.white-color {
+  color: var(--white-color) !important;
+}
+
+.black-background-color {
+  background-color: var(--black-color) !important;
+}
+
+.white-background-color {
+  background-color: var(--white-background-color) !important;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.margin-section {
+  margin-bottom: 50vh !important;
+}
+
+.section-header {
+  text-align: center;
+  font-weight: 600;
+  color: var(--white-color);
+  margin-bottom: 2em;
+}
+
+.hidden {
+  opacity: 0 !important;
+}
