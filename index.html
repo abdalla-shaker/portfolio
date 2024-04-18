@@ -32,31 +32,34 @@
         </div>
         <nav class="nav-container" id="nav-container">
           <ul class="d-flex" id="un-ordered-list">
-            <li class="on-section">
-              <a href="#home" id="home-link" onclick="lenis.scrollTo('#home');"
+            <li class="on-section list-item">
+              <a href="#home" class="nav__link on-section" id="home" onclick="lenis.scrollTo('#home');"
                 >Home</a
               >
             </li>
-            <li>
+            <li class="list-item">
               <a
                 href="#about"
-                id="about-link"
+                id="about"
+                class="nav__link"
                 onclick="lenis.scrollTo('#about');"
                 >About</a
               >
             </li>
-            <li>
+            <li class="list-item">
               <a
                 href="#projects"
-                id="projects-link"
+                id="projects"
+                class="nav__link"
                 onclick="lenis.scrollTo('#projects');"
                 >Projects</a
               >
             </li>
-            <li>
+            <li class="list-item">
               <a
                 href="#contact"
-                id="contact-link"
+                id="contact"
+                class="nav__link"
                 onclick="lenis.scrollTo('#contact');"
                 >Contact</a
               >
@@ -152,7 +155,7 @@
     <!-- end of header section -->
 
     <!-- HERO SECTION -->
-    <main class="main position-relative margin-section" id="home">
+    <main class="main position-relative margin-section section" id="home">
       <div class="personal-picture">
         <img src="images/profile picture.jpg" alt="my profile picture" />
       </div>
@@ -203,7 +206,7 @@
 
     <div class="custom-container">
       <!-- ABOUT SECTION -->
-      <section class="about margin-section" id="about">
+      <section class="about margin-section section" id="about">
         <h2 class="display-3 section-header">ABOUT ME</h2>
         <div class="about-body-container entries">
           <div class="image-side entry-media">
@@ -251,7 +254,7 @@
       <!-- END OF ABOUT SECTION -->
 
       <!-- PROJECTS SECTION -->
-      <section class="projects margin-section" id="projects">
+      <section class="projects margin-section section" id="projects">
         <h2 class="section-header display-3">Projects</h2>
         <div class="projects-card-container project-entries">
           <div class="project-card entry-project-1">
@@ -324,7 +327,7 @@
       <!-- END OF PROJECTS SECTION -->
 
       <!-- CONTACT SECTION -->
-      <section class="contact position-relative" id="contact">
+      <section class="contact position-relative section" id="contact">
         <h2 class="section-header display-3">Contact</h2>
         <form action="#" id="form">
           <div class="inputs-container">

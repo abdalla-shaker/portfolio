@@ -6,6 +6,9 @@ const burgerIcon = document.querySelector("#burger-icon");
 const header = document.querySelector("#header");
 const navContainer = document.querySelector("#nav-container");
 const unOrderedList = document.querySelector("#un-ordered-list");
+const listItems = document.querySelectorAll(".list-item");
+const navLinkEls = document.querySelectorAll(".nav__link");
+const sectionEls = document.querySelectorAll(".section");
 const laptopImage = document.querySelector("#image-side");
 const changeThePageColor = document.querySelector("#change-the-page-color");
 const moonIcon = document.querySelector("#moon-icon");
@@ -20,6 +23,7 @@ const failure = document.querySelector("#failure");
 const root = document.documentElement;
 const stylesheet = document.styleSheets[0];
 let COUNTER = 1;
+let CURRENTSECTION = "home";
 
 // The mouse circle following the mouse function
 window.addEventListener("mousemove", (e) => {
@@ -41,11 +45,19 @@ window.addEventListener("mousemove", (e) => {
 // Toggling classes on click of the burger icon to show/hide the navigation menu
 burgerIcon.addEventListener("click", () => {
   burgerIcon.classList.toggle("active");
-  navContainer.classList.toggle("active");
   header.classList.toggle("opened");
+  listItems.forEach((listItem) => {
+    listItem.classList.toggle("visible");
+    const viewed = document.querySelector(".on-section");
+    viewed.classList.add("fading");
+    setTimeout(() => {
+      document.querySelector(".fading").classList.remove("fading");
+    }, 700);
+  });
   setTimeout(() => {
     unOrderedList.classList.toggle("gap-3");
-  }, 500);
+    navContainer.classList.toggle("active");
+  }, 100);
 });
 
 // Changing the page colors on click of the color change button
@@ -261,4 +273,19 @@ entries.forEach((entry) => {
   );
 });
 
-// The following mouse circle animation
+// changing the nav link on the closing header
+
+window.addEventListener("scroll", () => {
+  sectionEls.forEach((sectionEl) => {
+    if (window.scrollY >= sectionEl.offsetTop - sectionEl.clientHeight / 2) {
+      CURRENTSECTION = sectionEl.id;
+    }
+  });
+
+  navLinkEls.forEach((navLinkEl) => {
+    if (navLinkEl.href.includes(CURRENTSECTION)) {
+      document.querySelector(".on-section").classList.remove("on-section");
+      navLinkEl.parentElement.classList.add("on-section");
+    }
+  });
+});

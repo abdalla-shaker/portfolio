@@ -64,6 +64,14 @@
   }
 }
 
+@keyframes fading {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
+
 .going-out {
   animation: slide-out-to-right 1s ease-in-out !important;
 }

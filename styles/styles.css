@@ -35,7 +35,7 @@ body {
   opacity: 0.9;
   padding: 2em 0;
   width: 190px;
-  transition: all 1.3s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 9;
 }
 
@@ -47,8 +47,18 @@ body {
   margin-left: 20px;
 }
 
+ol, ul {
+  padding-left: 1rem;
+}
+
 .on-section {
+  display: inline !important;
   opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+li:not(.on-section) {
+  display: none;
   transition: all 1s ease-in-out;
 }
 
@@ -85,22 +95,34 @@ body {
 .nav-container ul li {
   visibility: hidden;
   opacity: 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .nav-container.active ul li {
   visibility: visible;
   opacity: 1;
-  transition-delay: 1s;
+  transition-delay: 0.5s;
+}
+
+.visible {
+  display: inline !important;
+}
+
+.nav-container li.fading {
+  opacity: 0 !important;
+  transition-delay: unset;
 }
 
 .nav-container ul li {
   list-style: none;
   transition: opacity 0.5s ease-in-out, visibility 0.3s ease-in-out;
+  display: none;
 }
 
 .nav-container ul li.on-section {
   visibility: visible !important;
-  opacity: 1 !important;
+  opacity: 1;
+  transition: opacity 0s ease-in-out;
 }
 
 .nav-container ul li a:link,
