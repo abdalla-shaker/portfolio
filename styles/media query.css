@@ -34,6 +34,10 @@
   .about .text-side {
     width: 90%;
   }
+
+  .custom-container .projects {
+    width: 90%;
+  }
 }
 
 @media (max-width: 1279px) {
