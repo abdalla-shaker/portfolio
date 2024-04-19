@@ -23,7 +23,7 @@ const failure = document.querySelector("#failure");
 const root = document.documentElement;
 const stylesheet = document.styleSheets[0];
 let COUNTER = 1;
-let CURRENTSECTION = "home";
+let CURRENTSECTION = "home-link";
 
 // The mouse circle following the mouse function
 window.addEventListener("mousemove", (e) => {
