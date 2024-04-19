@@ -24,10 +24,14 @@
     align-items: center;
   }
   .custom-container {
-    width: 90%;
+    width: 100%;
   }
 
   .about {
+    width: 100%;
+  }
+
+  .about .text-side {
     width: 90%;
   }
 }

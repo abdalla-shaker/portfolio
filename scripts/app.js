@@ -255,7 +255,7 @@ entries.forEach((entry) => {
     scrollTrigger: {
       trigger: entry,
       start: "top bottom",
-      end: "bottom 90%",
+      end: "center 90%",
       scrub: true,
     },
   });
