@@ -129,6 +129,17 @@
   .button-group .secondary-button:hover::before {
     left: 59%;
   }
+
+  .social-media-container {
+    top: 0%;
+    right: 0%;
+    padding: 0.8em !important;
+    border-radius: unset;
+  }
+
+  .social-links-container {
+    padding: 0.8em !important; 
+  }
   
 }
 
